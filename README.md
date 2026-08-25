@@ -10,20 +10,18 @@ Paste this to your coding agent:
 Read the README and the SVG files at https://github.com/cwlin0131/product-flowchart,
 then make me a hero diagram in the same style.
 
-Ask me these three before you write anything:
-1. What the diagram shows, left to right.
-2. The three or four words that sit on each node.
-3. Any numbers on it, and whether they are real or placeholder.
+Ask me one thing first: what should it be about? A product, an idea, or just a
+URL you can go look at yourself.
 
-Then write two files here: hero-light.svg, and a preview.html that loads it
-with an img tag. Tell me to open preview.html in a browser.
+Then write hero-light.svg and a preview.html that loads it with an img tag, and
+tell me to open preview.html.
 
-The animation has to run inside that img tag, so everything stays in the one
-SVG file: CSS keyframes in a style block, no JavaScript, no external fonts,
-no external images.
+Everything stays inside the one SVG file: CSS keyframes in a style block, no
+JavaScript, no external fonts, no external images. That is what lets it animate
+inside a README.
 ```
 
-It asks first, then hands you an SVG and an HTML page. Open the HTML page and the diagram is already moving.
+One question, then you open an HTML page and the diagram is already moving. Give it a URL if you want the fastest version: it reads the site and decides what the diagram should say.
 
 ## vvibe agent tracker
 
