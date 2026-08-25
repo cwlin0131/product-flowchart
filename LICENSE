@@ -1,0 +1,25 @@
+Product Flowchart
+Copyright (c) 2026 CW Lin (https://github.com/cwlin0131)
+
+This repository is licensed in two parts, because it holds two different kinds
+of work.
+
+1. DIAGRAMS  -  Creative Commons Attribution-ShareAlike 4.0 International
+   (CC BY-SA 4.0), full text in LICENSE-DIAGRAMS.txt
+
+   Applies to every .svg file in vvibe-agent-tracker/ and vault-for-founders/,
+   and to preview.html.
+
+   You may share and adapt them, including commercially, provided you give
+   appropriate credit, link to the license, and indicate whether changes were
+   made; and provided that anything you build on top of them is distributed
+   under this same license.
+
+   Credit them as:
+     Diagram by CW Lin, https://github.com/cwlin0131/product-flowchart
+
+2. CODE  -  Apache License 2.0, full text in LICENSE-CODE.txt
+
+   Applies to everything under tools/.
+
+See NOTICE for trademark and attribution details.

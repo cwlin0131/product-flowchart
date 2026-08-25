@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Agent session segments flow onto per-user lanes, then compress into a team compare panel</title>
+  <defs>
+    <pattern id="subStripes" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-45)">
+      <rect width="3" height="7" fill="rgba(255,255,255,.62)"/>
+    </pattern>
+  </defs>
+
+  <style>
+    /* animations inlined so the file stands alone when embedded as an image on GitHub */
+    .an-flow { stroke-dasharray: 5 7; animation: an-mv 1.4s linear infinite; }
+    .an-wait { stroke-dasharray: 2 5; animation: an-mv 1.8s linear infinite; }
+    @keyframes an-mv { from { stroke-dashoffset: 0 } to { stroke-dashoffset: -24 } }
+    .an-pulse { animation: an-p 2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes an-p { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+    .an-gsA, .an-gsB, .an-gsC, .an-gsD { transform-box: fill-box; transform-origin: left center; }
+    .an-gsA { animation: an-gsA 9s linear infinite; }
+    .an-gsB { animation: an-gsB 9s linear infinite; }
+    .an-gsC { animation: an-gsC 9s linear infinite; }
+    .an-gsD { animation: an-gsD 9s linear infinite; }
+    @keyframes an-gsA { 0% { transform: scaleX(0) } 7%, 100% { transform: scaleX(1) } }
+    @keyframes an-gsB { 0%, 8% { transform: scaleX(0) } 16%, 100% { transform: scaleX(1) } }
+    @keyframes an-gsC { 0%, 18% { transform: scaleX(0) } 27%, 100% { transform: scaleX(1) } }
+    @keyframes an-gsD { 0%, 27% { transform: scaleX(0) } 35%, 100% { transform: scaleX(1) } }
+    .an-fdA { animation: an-fdA 9s linear infinite; }
+    .an-fdB { animation: an-fdB 9s linear infinite; }
+    .an-fdC { animation: an-fdC 9s linear infinite; }
+    .an-fdD { animation: an-fdD 9s linear infinite; }
+    @keyframes an-fdA { 0%, 16% { opacity: 0 } 21%, 100% { opacity: 1 } }
+    @keyframes an-fdB { 0%, 35% { opacity: 0 } 41%, 100% { opacity: 1 } }
+    @keyframes an-fdC { 0%, 41% { opacity: 0 } 48%, 100% { opacity: 1 } }
+    @keyframes an-fdD { 0%, 56% { opacity: 0 } 63%, 100% { opacity: 1 } }
+    .an-bar { transform-box: fill-box; transform-origin: left center; animation: an-bar 9s linear infinite; }
+    @keyframes an-bar { 0%, 44% { transform: scaleX(0) } 56%, 100% { transform: scaleX(1) } }
+  </style>
+
+  <rect id="site-bg" x="0" y="0" width="880" height="300" fill="#ffffff"/>
+
+
+  <!-- section labels -->
+  <text x="56" y="30" font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2.2" fill="#2a78d6">AGENT LANES &#183; LIVE</text>
+  <text x="584" y="30" font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="10" font-weight="700" letter-spacing="2.2" fill="#eb6834">COMPARE &#183; TEAM</text>
+
+  <!-- row separators -->
+  <line x1="16" y1="118" x2="500" y2="118" stroke="#ececf2" stroke-width="1"/>
+  <line x1="16" y1="186" x2="500" y2="186" stroke="#ececf2" stroke-width="1"/>
+
+  <!-- ===== user 1 : lead, two lanes ===== -->
+  <g>  <!-- user 1 avatar : stacked by design, grouped so the overlap checker treats it as one branch -->
+  <circle cx="30" cy="81" r="10" fill="#1a9e57"/>
+  <text x="30" y="84" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8" font-weight="700" fill="#fff">JT</text>
+  <text x="30" y="106" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="7.5" fill="#8a8a96" letter-spacing=".5">LEAD</text>
+  </g>
+
+  <!-- lane 1 -->
+  <rect class="an-gsA" x="56" y="70" width="94" height="10" rx="5" fill="#2a78d6"/>
+  <g class="an-fdA"><line class="an-wait" x1="152" y1="75" x2="178" y2="75" stroke="#2a78d6" stroke-width="2" stroke-opacity=".55" stroke-linecap="round"/></g>
+  <rect class="an-gsC" x="180" y="70" width="82" height="10" rx="5" fill="#2a78d6"/>
+  <g class="an-fdC"><circle class="an-pulse" cx="270" cy="75" r="3.5" fill="#2a78d6"/></g>
+  <!-- lane 2 with subagent stripes -->
+  <g class="an-gsB">
+    <rect x="96" y="92" width="80" height="10" rx="5" fill="#eb6834"/>
+    <rect x="116" y="92" width="52" height="10" rx="5" fill="url(#subStripes)"/>
+  </g>
+  <g class="an-fdA"><line class="an-wait" x1="178" y1="97" x2="202" y2="97" stroke="#eb6834" stroke-width="2" stroke-opacity=".55" stroke-linecap="round"/></g>
+  <rect class="an-gsD" x="204" y="92" width="76" height="10" rx="5" fill="#eb6834"/>
+
+  <!-- ===== user 2 : engineer, two lanes ===== -->
+  <g>  <!-- user 2 avatar : stacked by design, grouped so the overlap checker treats it as one branch -->
+  <circle cx="30" cy="147" r="10" fill="#8b7cf6"/>
+  <text x="30" y="150" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8" font-weight="700" fill="#fff">MS</text>
+  <text x="30" y="172" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="7.5" fill="#8a8a96" letter-spacing=".5">ENG</text>
+  </g>
+
+  <rect class="an-gsA" x="56" y="136" width="66" height="10" rx="5" fill="#1baf7a"/>
+  <g class="an-fdA"><line class="an-wait" x1="124" y1="141" x2="144" y2="141" stroke="#1baf7a" stroke-width="2" stroke-opacity=".55" stroke-linecap="round"/></g>
+  <rect class="an-gsC" x="146" y="136" width="66" height="10" rx="5" fill="#1baf7a"/>
+  <rect class="an-gsD" x="168" y="158" width="94" height="10" rx="5" fill="#4a3aa7"/>
+  <g class="an-fdC"><circle class="an-pulse" cx="270" cy="163" r="3.5" fill="#4a3aa7"/></g>
+
+  <!-- ===== user 3 : new hire, one lane, long break ===== -->
+  <g>  <!-- user 3 avatar : stacked by design, grouped so the overlap checker treats it as one branch -->
+  <circle cx="30" cy="215" r="10" fill="#3d3d63"/>
+  <text x="30" y="218" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8" font-weight="700" fill="#fff">KL</text>
+  <text x="30" y="240" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="7.5" fill="#8a8a96" letter-spacing=".5">NEW</text>
+  </g>
+
+  <rect class="an-gsB" x="80" y="210" width="38" height="10" rx="5" fill="#eda100"/>
+  <rect class="an-gsD" x="210" y="210" width="40" height="10" rx="5" fill="#eda100"/>
+  <g class="an-fdC"><circle class="an-pulse" cx="258" cy="215" r="3.5" fill="#eda100"/></g>
+
+  <!-- ===== flow lines : lanes compress into compare ===== -->
+  <g class="an-fdB">
+    <path class="an-flow" d="M300,86 C420,86 470,112 576,112" fill="none" stroke="#2a78d6" stroke-width="1.6" stroke-opacity=".6"/>
+    <path class="an-flow" d="M300,152 C420,152 470,146 576,146" fill="none" stroke="#1baf7a" stroke-width="1.6" stroke-opacity=".6"/>
+    <path class="an-flow" d="M300,215 C420,215 470,180 576,180" fill="none" stroke="#eda100" stroke-width="1.6" stroke-opacity=".6"/>
+  </g>
+
+  <!-- ===== compare panel ===== -->
+  <g>  <!-- compare panel : stacked by design, grouped so the overlap checker treats it as one branch -->
+  <rect x="580" y="46" width="284" height="204" rx="12" fill="#fafafd" stroke="#ececf2"/>
+  <text x="596" y="70" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="700" letter-spacing="1.8" fill="#55555f">COMPARE &#183; THIS WEEK</text>
+  <text x="652" y="92" font-family="ui-monospace,Consolas,monospace" font-size="8" letter-spacing="1" fill="#8a8a96">PER PROMPT</text>
+  <text x="712" y="92" font-family="ui-monospace,Consolas,monospace" font-size="8" letter-spacing="1" fill="#8a8a96">LEVERAGE</text>
+  <text x="816" y="92" font-family="ui-monospace,Consolas,monospace" font-size="8" letter-spacing="1" fill="#8a8a96">ERR</text>
+
+  <g class="an-fdC">
+    <!-- row 1 -->
+    <circle cx="606" cy="112" r="5" fill="#1a9e57"/>
+    <text x="618" y="116" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">JT</text>
+    <text x="652" y="116" font-family="ui-monospace,Consolas,monospace" font-size="11" font-weight="700" fill="#1c1c24">4.2m</text>
+    <text x="770" y="116" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">2.6&#215;</text>
+    <text x="816" y="116" font-family="ui-monospace,Consolas,monospace" font-size="10" fill="#1baf7a">3%</text>
+    <!-- row 2 -->
+    <circle cx="606" cy="146" r="5" fill="#8b7cf6"/>
+    <text x="618" y="150" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">MS</text>
+    <text x="652" y="150" font-family="ui-monospace,Consolas,monospace" font-size="11" font-weight="700" fill="#1c1c24">2.9m</text>
+    <text x="770" y="150" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">1.7&#215;</text>
+    <text x="816" y="150" font-family="ui-monospace,Consolas,monospace" font-size="10" fill="#1baf7a">6%</text>
+    <!-- row 3 -->
+    <circle cx="606" cy="180" r="5" fill="#3d3d63"/>
+    <text x="618" y="184" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">KL</text>
+    <text x="652" y="184" font-family="ui-monospace,Consolas,monospace" font-size="11" font-weight="700" fill="#1c1c24">1.1m</text>
+    <text x="770" y="184" font-family="ui-monospace,Consolas,monospace" font-size="10" font-weight="600" fill="#1c1c24">1.0&#215;</text>
+    <text x="816" y="184" font-family="ui-monospace,Consolas,monospace" font-size="10" fill="#eda100">11%</text>
+  </g>
+  <!-- leverage bars -->
+  <rect class="an-bar" x="700" y="108" width="60" height="8" rx="4" fill="#1a9e57" opacity=".85"/>
+  <rect class="an-bar" x="700" y="142" width="40" height="8" rx="4" fill="#8b7cf6" opacity=".85"/>
+  <rect class="an-bar" x="700" y="176" width="24" height="8" rx="4" fill="#3d3d63" opacity=".85"/>
+
+  <line x1="596" y1="200" x2="848" y2="200" stroke="#ececf2"/>
+  <g class="an-fdD">
+    <text x="596" y="220" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">team &#183; 41 sessions &#183; 9.4h agent time</text>
+    <circle cx="600" cy="234" r="3.5" fill="#eda100"/>
+    <text x="609" y="238" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">KL run:wait 52:48 &#183; babysits one lane</text>
+  </g>
+  </g>
+
+  <!-- ===== legend ===== -->
+  <rect x="56" y="266" width="20" height="8" rx="4" fill="#2a78d6"/>
+  <text x="82" y="274" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">agent running</text>
+  <line x1="200" y1="270" x2="220" y2="270" stroke="#2a78d6" stroke-opacity=".55" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round"/>
+  <text x="228" y="274" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">wait &#8804; 10 min</text>
+  <g>
+    <rect x="340" y="266" width="20" height="8" rx="4" fill="#2a78d6"/>
+    <rect x="340" y="266" width="20" height="8" rx="4" fill="url(#subStripes)"/>
+  </g>
+  <text x="366" y="274" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">subagents</text>
+  <rect x="470" y="266" width="20" height="8" rx="4" fill="none" stroke="#d6d6e0" stroke-dasharray="3 3"/>
+  <text x="496" y="274" font-family="ui-monospace,Consolas,monospace" font-size="9" fill="#55555f">break &#183; not counted</text>
+</svg>
