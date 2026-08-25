@@ -2,7 +2,7 @@
 
 Animated product hero diagrams. One SVG file per diagram, CSS animations embedded, no JS, no external assets. The same file works on a website, in a GitHub README, and as a source for GIF conversion.
 
-## Make one
+## Make yours now
 
 Paste this to your coding agent:
 
